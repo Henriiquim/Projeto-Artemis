@@ -51,11 +51,11 @@ while True:
         break
 
 while True:
-    anosp = int(input("Ano: "))
-    if type(anosp) != int:
-        print("Atenção: utilize apenas números.")
-    else: 
+    try:
+        anosp = int(input("Ano: "))
         break
+    except ValueError:
+        print("Atenção: utilize apenas números.")
 
 while True:
     subespecie = input("Subespécie: ")
